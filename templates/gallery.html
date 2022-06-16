@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Gallery
+{% endblock %}
+
+
+{% block body %}   
+
+<div class="wrapper">
+    <h2 class="gallery-title">gallery</h2>
+</div>
+<div class="container">
+    {% for image_name in image_names %}
+    <div class="one-fourth">
+        <img src=" {{url_for('send_image', filename=image_name)}}">
+    </div>
+    {% endfor %}
+</div>
+
+
+<script src="static/js/main.js"></script>
+
+{% endblock %}

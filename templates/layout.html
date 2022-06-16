@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width", initial-scale=1.0">
+        <link rel="shortcut icon" type="image/png" href="static/img/vase1.jpg"> 
+        <link rel="stylesheet" type="text/css" href="static/css/resetstyle.css">
+        <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    </head>
+    <body>
+
+        <header>
+            <span class="header-brand">Cloud Atlas</span>
+            <nav>
+               
+                <span class="header-removed" id="remove">Remove</span>
+                <span class="header-show">Show</span>
+                <span class="header-reset" id="reset">Reset</span>
+                <ul class="list">
+                    <li>
+                        <a class="header-download" id="remove">Download</a>
+                    </li>
+                    <li class="downloaditems">
+                        <a href="{{url_for('cloudatlas_json_file')}}" class="item" id="remove">json</a>
+                    </li>
+                    <li class="downloaditems">
+                        <a href="{{url_for('cloudatlas_csv_file')}}" class="item" id="remove">csv</a>
+                    </li>
+                </ul>
+            
+                
+            </nav>
+        </header>
+
+        <main>
+                {% block body %}
+                {% endblock %}
+
+        </main>
+
+        <footer class="ft-link">                
+            <img src="static/img/down-arrow.svg">
+            
+        </footer>
+
+
+    
+        <script src="static/js/main.js"></script>
+    
+</body>
+    </html>
